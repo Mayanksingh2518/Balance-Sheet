@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Balance Sheet Input</title>
+</head>
+<body>
+    <h1>Enter Balance Sheet Data</h1>
+    <form method="post">
+        {% csrf_token %}
+        <h2>Assets</h2>
+        <label>Cash:</label>
+        <input type="number" step="0.01" name="cash" required><br><br>
+        <label>Accounts Receivable:</label>
+        <input type="number" step="0.01" name="ar" required><br><br>
+
+        <h2>Liabilities</h2>
+        <label>Loans:</label>
+        <input type="number" step="0.01" name="loans" required><br><br>
+
+        <h2>Equity</h2>
+        <label>Owner's Equity:</label>
+        <input type="number" step="0.01" name="equity" required><br><br>
+
+        <button type="submit">Generate Word</button>
+    </form>
+</body>
+</html>
